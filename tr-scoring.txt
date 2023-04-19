@@ -1,0 +1,98 @@
+## Scoring time control ##
+
+iv:Gr/Color/time00 = 3 0 0 255
+iv:Gr/Color/time05 = 3 0 0 255
+iv:Gr/Color/time10 = 3 0 0 255
+iv:Gr/Color/time15 = 3 0 0 255
+iv:Gr/Color/time20 = 3 0 0 255
+iv:Gr/Color/time25 = 3 0 0 255
+iv:Gr/Color/time30 = 3 0 0 255
+iv:Gr/Color/time35 = 3 0 0 255
+iv:Gr/Color/time40 = 3 0 0 255
+iv:Gr/Color/time45 = 3 0 0 255
+iv:Gr/Color/time50 = 3 0 0 255
+iv:Gr/Color/time55 = 3 0 0 255
+iv:Gr/Color/time60 = 3 0 0 255
+iv:Gr/Color/time65 = 3 0 0 255
+iv:Gr/Color/time70 = 3 0 0 255
+iv:Gr/Color/time75 = 3 0 0 255
+iv:Gr/Color/time80 = 3 0 0 255
+iv:Gr/Color/time85 = 3 0 0 255
+iv:Gr/Color/time90 = 3 0 0 255
+
+s:Tf/ScoringTime/Function = "step"
+dv:Tf/ScoringTime/Times = 19 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 ms
+sv:Tf/ScoringTime/Values = 19 "time00" "time05" "time10" "time15" "time20" "time25" "time30" "time35" "time40" "time45" "time50" "time55" "time60" "time65" "time70" "time75" "time80" "time85" "time90"
+
+# Time feature split dose calculation
+
+s:Sc/DoseAtScorePhantom1/OutputFile = "ScoringPhantom1"
+s:Sc/DoseAtScorePhantom1/Quantity = "DoseToMedium"
+s:Sc/DoseAtScorePhantom1/Component = "ScoringPhantom1"
+s:Sc/DoseAtScorePhantom1/OutputType = "csv"
+s:Sc/DoseAtScorePhantom1/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/DoseAtScorePhantom1/SplitByTimeFeature = "ScoringTime"
+
+s:Sc/DoseAtScorePhantom2/OutputFile = "ScoringPhantom2"
+s:Sc/DoseAtScorePhantom2/Quantity = "DoseToMedium"
+s:Sc/DoseAtScorePhantom2/Component = "ScoringPhantom2"
+s:Sc/DoseAtScorePhantom2/OutputType = "csv"
+s:Sc/DoseAtScorePhantom2/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/DoseAtScorePhantom2/SplitByTimeFeature = "ScoringTime"
+
+s:Sc/DoseAtScorePhantom3/OutputFile = "ScoringPhantom3"
+s:Sc/DoseAtScorePhantom3/Quantity = "DoseToMedium"
+s:Sc/DoseAtScorePhantom3/Component = "ScoringPhantom3"
+s:Sc/DoseAtScorePhantom3/OutputType = "csv"
+s:Sc/DoseAtScorePhantom3/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/DoseAtScorePhantom3/SplitByTimeFeature = "ScoringTime"
+
+s:Sc/DoseAtScorePhantom4/OutputFile = "Proximal1"
+s:Sc/DoseAtScorePhantom4/Quantity = "DoseToMedium"
+s:Sc/DoseAtScorePhantom4/Component = "Proximal1"
+s:Sc/DoseAtScorePhantom4/OutputType = "csv"
+s:Sc/DoseAtScorePhantom4/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/DoseAtScorePhantom4/SplitByTimeFeature = "ScoringTime"
+
+s:Sc/DoseAtScorePhantom5/OutputFile = "Proximal2"
+s:Sc/DoseAtScorePhantom5/Quantity = "DoseToMedium"
+s:Sc/DoseAtScorePhantom5/Component = "Proximal2"
+s:Sc/DoseAtScorePhantom5/OutputType = "csv"
+s:Sc/DoseAtScorePhantom5/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/DoseAtScorePhantom5/SplitByTimeFeature = "ScoringTime"
+
+s:Sc/DoseAtScorePhantom6/OutputFile = "Proximal3"
+s:Sc/DoseAtScorePhantom6/Quantity = "DoseToMedium"
+s:Sc/DoseAtScorePhantom6/Component = "Proximal3"
+s:Sc/DoseAtScorePhantom6/OutputType = "csv"
+s:Sc/DoseAtScorePhantom6/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/DoseAtScorePhantom6/SplitByTimeFeature = "ScoringTime"
+
+## Dipole magnet control ## 
+
+s:Tf/Dipolemagnet1st/Function = "step"
+dv:Tf/Dipolemagnet1st/Times = 1550
+0.000000 0.059920 0.119840 0.179760 0.239680 0.299600 0.359520 0.419440 0.479360 ...
+
+dv:Tf/Dipolemagnet1st/values = 1550
+0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 ...
+
+s:Tf/Dipolemagnet2nd/Function = "step"
+dv:Tf/Dipolemagnet2nd/Times = 1550
+0.000000 0.059920 0.119840 0.179760 0.239680 0.299600 0.359520 0.419440 0.479360 ...
+
+dv:Tf/Dipolemagnet2nd/values = 1550
+0.831318 0.831318 0.831318 0.831318 0.831318 0.831318 0.831318 0.831318 0.831318 ...
+
+## Particle Weight ## 
+
+s:Tf/Particles/Function = "step"
+dv:Tf/Particles/Times = 1550
+0.000000 0.059920 0.119840 0.179760 0.239680 0.299600 0.359520 0.419440 0.479360 ...
+
+iv:Tf/Particles/values = 1550
+35 59 41 12 29 53 21 22 21 18 40 26 0 23 57 19 6 16 28 37 24 0 16 41 33 5 12 60 2103 ...
+
+d:Tf/TimelineEnd = 92.8161 ms
+i:Tf/NumberofsequentialTimes = 1550
+
